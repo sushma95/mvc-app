@@ -2,10 +2,12 @@
 
 1. Sushma Yedugani
 2. Nikitha kethireddy
-3. Rishika Ponugati
+3. Rishika Ponugoti
 
 # Tasks Assigned
 
 - Sushma Yedugani-Courses
 - Nikitha kethireddy-Section
-- Rishika Ponugati-Student
+- Rishika Ponugoti-Student
+
+
