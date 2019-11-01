@@ -1,5 +1,11 @@
 # Group Members
 
-1. sushma Yedugani
-2. nikitha kethireddy
-3. rishika ponugati
+1. Sushma Yedugani
+2. Nikitha kethireddy
+3. Rishika Ponugati
+
+# Tasks Assigned
+
+- Sushma Yedugani-Courses
+- Nikitha kethireddy-Section
+- Rishika Ponugati-Student
