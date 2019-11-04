@@ -4,6 +4,8 @@
 2. Nikitha kethireddy
 3. Rishika Ponugoti
 
+![Team_Members](Team.PNG)
+
 # Tasks Assigned
 
 - Sushma Yedugani-Courses
