@@ -1,6 +1,7 @@
 const Datastore = require('nedb') // set up a temporary (in memory) database
 const developerData = require('../data/developers.json') // read in data file
-const CoursesData = require('../data/Courses.json')// read in data file
+const CoursesData = require('../data/Courses.json')
+const SectionData = require('../data/Sections.json')//// read in data file
 // inject Express app to configure it - EVERYTHING in through argument list
 
 module.exports = (app) => {
@@ -15,7 +16,7 @@ module.exports = (app) => {
   db.Sections = new Datastore() // new object property
   db.Sections.loadDatabase()
   // insert the sample data into our datastore
-  db.Section.insert(SectionData)
+  db.Sections.insert(SectionData)
   
   // insert the sample data into our datastore
   db.developers.insert(developerData)
