@@ -29,6 +29,7 @@ router.use('/dev', require('../controllers/developer.js'))
 // Route requests that start with '/Course' to a particular controller
 router.use('/Course', require('../controllers/Course.js'))
 router.use('/Section', require('../controllers/Section.js'))
+router.use('/Student', require('../controllers/Student.js'))
 
 console.log('END routing')
 module.exports = router

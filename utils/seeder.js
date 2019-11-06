@@ -1,7 +1,8 @@
 const Datastore = require('nedb') // set up a temporary (in memory) database
 const developerData = require('../data/developers.json') // read in data file
 const CoursesData = require('../data/Courses.json')
-const SectionData = require('../data/Sections.json')//// read in data file
+const SectionData = require('../data/Sections.json')
+const StudentData = require('../data/Students.json')//// read in data file
 // inject Express app to configure it - EVERYTHING in through argument list
 
 module.exports = (app) => {
@@ -21,6 +22,11 @@ module.exports = (app) => {
   // insert the sample data into our datastore
   db.developers.insert(developerData)
   db.developers.insert(CoursesData)
+// insert the sample data into our datastore
+  db.Students = new Datastore() // new object property
+  db.Students.loadDatabase()
+
+  db.Students.insert(StudentData)
 
   // initialize app.locals (these objects are available to the controllers)
   app.locals.developers = db.developers.find(developerData)
@@ -34,4 +40,7 @@ module.exports = (app) => {
   console.log(`${app.locals.Sections.query.length} Sections seeded`)
 
   console.log('END Data Seeder. Sample data read and verified.')
+
+  app.locals.Students = db.Students.find(StudentData)
+  console.log(`${app.locals.Students.query.length} Students seeded`)
 }
