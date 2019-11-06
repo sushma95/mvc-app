@@ -11,6 +11,11 @@ module.exports = (app) => {
   db.Courses = new Datastore() // new object property
   db.developers.loadDatabase() // call the loadDatabase method
   db.Courses.loadDatabase()
+
+  db.Sections = new Datastore() // new object property
+  db.Sections.loadDatabase()
+  // insert the sample data into our datastore
+  db.Section.insert(SectionData)
   
   // insert the sample data into our datastore
   db.developers.insert(developerData)
@@ -23,6 +28,9 @@ module.exports = (app) => {
   
   app.locals.Courses = db.developers.find(CoursesData)
   console.log(`${app.locals.Courses.query.length} Courses seeded`)
+
+  app.locals.Sections = db.Sections.find(SectionData)
+  console.log(`${app.locals.Sections.query.length} Sections seeded`)
 
   console.log('END Data Seeder. Sample data read and verified.')
 }

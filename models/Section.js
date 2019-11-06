@@ -17,7 +17,7 @@ const SectionSchema = new mongoose.Schema({
   },
 
   SectionNumber: {
-    type: CharacterData(2),
+    type: String,
     maxlength: 2,
     required: true,
     default: '01'
