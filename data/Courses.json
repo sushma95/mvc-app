@@ -1,0 +1,72 @@
+[
+    {
+      "_id": 200,
+      "SchoolNumber ": 1,
+      "CourseNumber ": 123,
+      "Name": "sush",
+      "inSpring ": "true",
+      "inSummer ": "false",
+      "inFall ": "false"
+      
+    },
+    {
+       
+      "_id": 201,
+      "SchoolNumber ": 3,
+      "CourseNumber ": 124,
+      "Name": "tuffy",
+      "inSpring ": "false",
+      "inSummer ": "true",
+      "inFall ": "true"
+    },
+    {
+        "_id": 202,
+        "SchoolNumber ": 4,
+        "CourseNumber ": 125,
+        "Name": "oranishi",
+        "inSpring ": "false",
+        "inSummer ": "false",
+        "inFall ": "true"
+        
+      },
+      {
+        "_id": 203,
+        "SchoolNumber ": 5,
+        "CourseNumber ": 126,
+        "Name": "teja",
+        "inSpring ": "true",
+        "inSummer ": "false",
+        "inFall ": "false"
+        
+      },
+      {
+        "_id": 204,
+        "SchoolNumber ": 3,
+        "CourseNumber ": 127,
+        "Name": "ishi",
+        "inSpring ": "true",
+        "inSummer ": "false",
+        "inFall ": "false"
+        
+      },
+      {
+        "_id": 205,
+        "SchoolNumber ": 4,
+        "CourseNumber ": 128,
+        "Name": "nikki",
+        "inSpring ": "true",
+        "inSummer ": "false",
+        "inFall ": "false"
+        
+      },
+      {
+        "_id": 206,
+        "SchoolNumber ": 3,
+        "CourseNumber ": 129,
+        "Name": "kritin",
+        "inSpring ": "true",
+        "inSummer ": "true",
+        "inFall ": "false"
+        
+      }
+  ]

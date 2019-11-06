@@ -26,5 +26,8 @@ router.get('/index', (req, res, next) => {
 // Route requests that start with '/dev' to a particular controller
 router.use('/dev', require('../controllers/developer.js'))
 
+// Route requests that start with '/Course' to a particular controller
+router.use('/Course', require('../controllers/Course.js'))
+
 console.log('END routing')
 module.exports = router
