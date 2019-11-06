@@ -1,0 +1,69 @@
+[
+    {
+      "_id": 99,
+      "SectionNumber": "02",
+      "Days": "MWF",
+      "StartTime": 1200,
+      "RoomNumber": "CH 3170",
+      "CourseID": 44563
+    },
+    {
+        "_id": 100,
+        "SectionNumber": "04",
+        "Days": "MWF",
+        "StartTime": 1100,
+        "RoomNumber": "CH 1200",
+        "CourseID": 44542
+    },
+    {
+        "_id": 101,
+        "SectionNumber": "01",
+        "Days": "MWF",
+        "StartTime": 1300,
+        "RoomNumber": "CH 1270",
+        "CourseID": 44563
+    },
+    {
+        "_id": 102,
+        "SectionNumber": "02",
+        "Days": "TR",
+        "StartTime": 1200,
+        "RoomNumber": "CH 3170",
+        "CourseID": 44563
+      },
+      {
+        "_id": 103,
+        "SectionNumber": "04",
+        "Days": "TR",
+        "StartTime": 1100,
+        "RoomNumber": "CH 1200",
+        "CourseID": 44542
+      },
+
+      {
+        "_id": 103,
+        "SectionNumber": "01",
+        "Days": "TR",
+        "StartTime": 1300,
+        "RoomNumber": "CH 1270",
+        "CourseID": 44542
+      },
+      {
+        "_id": 104,
+        "SectionNumber": "04",
+        "Days": "MWF",
+        "StartTime": 1300,
+        "RoomNumber": "CH 1250",
+        "CourseID": 44560
+      },
+      {
+        "_id": 105,
+        "SectionNumber": "01",
+        "Days": "TR",
+        "StartTime": 1100,
+        "RoomNumber": "CH 1250",
+        "CourseID": 44560
+      }
+
+  ]
+  
