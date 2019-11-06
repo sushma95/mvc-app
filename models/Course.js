@@ -15,7 +15,7 @@ const CourseSchema = new mongoose.Schema({
     required: true
   },
   SchoolNumber : {
-    type: Number,
+    type: String,
     minlength: 1,
     maxlength: 2,
     required: true,
@@ -23,7 +23,7 @@ const CourseSchema = new mongoose.Schema({
     default:44
   },
   CourseNumber : {
-    type: Number,
+    type: String,
     minlength: 1,
     maxlength: 3,
     required: true,
@@ -31,28 +31,28 @@ const CourseSchema = new mongoose.Schema({
   },
   Name : {
     type: String,
-    
+    minlength: 4,
     maxlength: 100,
     required: true,
     default: 'Developing Web Apps and Services'
   },
   inSpring : {
     type: Boolean,
-   
+    minlength: 1,
     maxlength: 3,
     required: true,
     
   },
   inSummer : {
     type: Boolean,
-   
+    minlength: 1,
     maxlength: 3,
     required: true,
     
   },
   inFall : {
     type: Boolean,
-    
+    minlength: 1,
     maxlength: 3,
     required: true,
    
