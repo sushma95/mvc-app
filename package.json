@@ -4,12 +4,21 @@
   "version": "1.0.0",
   "author": "Denise Case",
   "dependencies": {
+    "body-parser": "latest",
     "config": "latest",
+    "consolidate": "latest",
+    "cookie-parser": "latest",
+    "debug": "latest",
+    "ejs": "latest",
     "express": "latest",
+    "express-ejs-layouts": "latest",
+    "helmet": "latest",
     "lodash": "latest",
     "lodash.find": "latest",
     "mongoose": "latest",
-    "nedb": "latest"
+    "morgan": "^1.9.1",
+    "nedb": "latest",
+    "serve-favicon": "latest"
   },
   "devDependencies": {
     "eslint": "latest",
