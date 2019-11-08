@@ -1,0 +1,42 @@
+<br>
+<br>
+<div class="container-fluid">
+  <div class=row>
+    <div class="col col-md-12">
+      <a href="developer/create" class="btn btn-primary new">
+        Create a new Section
+      </a>
+
+      <h2>Recent entries</h2>
+      <p>There are
+        <%= Sections.length %> Sections.
+        <br>
+      </p>
+      <% for (let i = Sections.length-1; i >= 0; i--) {   
+        Section = Sections[i];   %>
+
+      <div class="panel panel-default">
+        <div class="panel-heading"></div>
+        <div class="text-muted pull-right"></div>
+        <div class="panel-body">
+
+          <br> ID: <%=Section._id %>
+          <br> SectionNumber : <%=Section.SectionNumber %>
+          <br> Days: <%=Section.Days %>
+          <br> StartTime: <%=Section.StartTime %>
+          <br> RoomNumber: <%=Section.RoomNumber %>
+          <br> CourseID: <%=Section.CourseID %>
+
+          <hr>
+          <a href="/Section/delete/<%= Section._id  %>" class="btn btn-danger"> Delete </a>
+          <a href="/Section/details/<%= Section._id %>" class="btn btn-info"> Details </a>
+          <a href="/Section/edit/<%= Section._id %>" class="btn btn-primary"> Edit </a>
+          <hr>
+          <hr>
+        </div>
+      </div>
+      <% } %>
+
+    </div>
+  </div>
+</div>

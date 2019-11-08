@@ -3,7 +3,9 @@
 <div class="container-fluid">
   <div class=row>
     <div class="col col-md-12">
-      
+      <a href="Course/create" class="btn btn-primary new">
+        Create a new Course
+      </a>
 
       <h2>Recent entries</h2>
       <p>There are
@@ -11,24 +13,26 @@
         <br>
       </p>
       <% for (let i = Courses.length-1; i >= 0; i--) {   
-        Courses = Courses[i];   %>
+        Course = Courses[i];   %>
 
       <div class="panel panel-default">
         <div class="panel-heading"></div>
         <div class="text-muted pull-right"></div>
         <div class="panel-body">
 
-          <br> ID: <%=  Courses._id %>
-          <br> SchoolNumber: <%=Courses.SchoolNumber%>
-          <br> CourseNumber: <%=Courses.CourseNumber%>
-          <br> Name: <%=Courses.Name%>
-          <br> inSpring: <%=Courses.inSpring %>
-          <br> inSummer: <%=Courses.inSummer %>
-          <br> inFall: <%=Courses.inFall %>
+          <br> ID: <%=  Course._id %>
+          <br> SchoolNumber: <%=Course.SchoolNumber%>
+          <br> CourseNumber: <%=Course.CourseNumber%>
+          <br> Name: <%=Course.Name%>
+          <br> inSpring: <%=Course.inSpring %>
+          <br> inSummer: <%=Course.inSummer %>
+          <br> inFall: <%=Course.inFall %>
           
 
           <hr>
-          
+          <a href="/Course/delete/<%= Course._id  %>" class="btn btn-danger"> Delete </a>
+          <a href="/Course/details/<%= Course._id %>" class="btn btn-info"> Details </a>
+          <a href="/Course/edit/<%= Course._id %>" class="btn btn-primary"> Edit </a>
           <hr>
           <hr>
         </div>

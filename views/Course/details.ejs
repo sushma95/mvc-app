@@ -1,0 +1,24 @@
+<br>
+<br>
+<div class="container-fluid">
+  <div class=row>
+    <div class="col col-md-12">
+
+      <h2>Details</h2>
+      <br>
+      <br> ID: <%=  Course._id %>
+      <br> SchoolNumber: <%=Course.SchoolNumber%>
+      <br> CourseNumber: <%=Course.CourseNumber%>
+      <br> Name: <%=Course.Name%>
+      <br> inSpring: <%=Course.inSpring %>
+      <br> inSummer: <%=Course.inSummer %>
+      <br> inFall: <%=Course.inFall %>
+      <hr>
+
+      <form method="get" action="/Course">
+        <input type="submit" value="Return to list" class="btn btn-caution" />
+      </form>
+
+    </div>
+  </div>
+</div>

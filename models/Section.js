@@ -12,7 +12,6 @@ const SectionSchema = new mongoose.Schema({
 
   _id: {
     type: Number,
-    unique: true,
     required: true
   },
 
@@ -45,9 +44,10 @@ const SectionSchema = new mongoose.Schema({
   },
   CourseID: {
     type: Number,
+    minlength: 1,
     maxlength: 3,
     required: true
-  },
+  }
  
 })
 module.exports = mongoose.model('Section', SectionSchema)
