@@ -2,79 +2,72 @@
     {
       "_id": 1234,
       "Given": "rishika@nwmissouri.edu",
-      
      "family": "Ponugoti",
       "Email": "ponugotirishika@gmail.com",
       "GitHub": "rishikaponugoti",
       "Website": "https://github.com/rishikaponugoti",
-      "GPA(Number)": 3.00,
-      "Section ID": 99
+      "GPA": 3.00,
+      "Section_ID": 99
      
     },
     {
         "_id": 2345,
-        "Given": "nikitha@nwmissouri.edu",
-        
+        "Given": "nikitha@nwmissouri.edu",   
        "family": "kethireddy",
         "Email": "ponugotirishika@gmail.com",
         "GitHub": "nikithakethireddy1996",
         "Website": "https://github.com/nikithakethireddy1996",
-        "GPA(Number)": 3.00,
-        "Section ID": 100
+        "GPA": 3.00,
+        "Section_ID": 100
     },
     {
       "_id": 7765,
-      "Given": "sush@nwmissouri.edu",
-      
+      "Given": "sush@nwmissouri.edu", 
      "family": "edugani",
       "Email": "sushma@gmail.com",
       "GitHub": "sushmasush",
       "Website": "https://github.com/sushmasush",
-      "GPA(Number)": 3.00,
-      "Section ID": 101
+      "GPA": 3.00,
+      "Section_ID": 101
   },
   {
     "_id": 9432,
-    "Given": "amrutha@nwmissouri.edu",
-    
+    "Given": "amrutha@nwmissouri.edu", 
    "family": "nayini",
     "Email": "amrutha@gmail.com",
     "GitHub": "amrutha",
     "Website": "https://github.com/amrutha",
-    "GPA(Number)": 3.00,
-    "Section ID": 99
+    "GPA": 3.00,
+    "Section_ID": 99
 },
 {
   "_id": 8970,
-  "Given": "meg@nwmissouri.edu",
-  
+  "Given": "meg@nwmissouri.edu", 
  "family": "kana",
   "Email": "meg@gmail.com",
   "GitHub": "rishikaponugoti",
   "Website": "https://github.com/meg",
-  "GPA(Number)": 3.00,
-  "Section ID": 104
+  "GPA": 3.00,
+  "Section_ID": 104
 },
 {
   "_id": 6789,
   "Given": "minnu@nwmissouri.edu",
-  
  "family": "Ponu",
   "Email": "ponu@gmail.com",
   "GitHub": "minnu",
   "Website": "https://github.com/minnu",
-  "GPA(Number)": 3.00,
-  "Section ID": 101
+  "GPA": 3.00,
+  "Section_ID": 101
 },
 {
   "_id": 4567,
   "Given": "abhi@nwmissouri.edu",
-  
  "family": "Pingili",
   "Email": "pingiliabhi@gmail.com",
   "GitHub": "pingiliabhi",
   "Website": "https://github.com/pingiliabhi",
-  "GPA(Number)": 3.00,
-  "Section ID": 101
+  "GPA": 3.00,
+  "Section_ID": 101
 }
   ]
