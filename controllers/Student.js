@@ -26,8 +26,8 @@ api.get('/findone/:id', (req, res) => {
 // RESPOND WITH VIEWS  --------------------------------------------
 // GET to this controller base URI (the default)
 api.get('/', (req, res) => {
-  res.render('developer/index.ejs', {
-    Students: req.app.locals.developers.query
+  res.render('Student/index.ejs', {
+    Students: req.app.locals.Students.query
   })
 })
 
