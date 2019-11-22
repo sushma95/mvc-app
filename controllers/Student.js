@@ -1,6 +1,6 @@
 const express = require('express')
 const api = express.Router()
-// const Model = require('../models/developer.js')
+const Model = require('../models/Student.js')
 const find = require('lodash.find')
 const notfoundstring = 'Could not find Student with id='
 
