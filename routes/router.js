@@ -26,12 +26,26 @@ res.render('index', { title: 'MVC' })
 })
 
 // Route requests that start with '/dev' to a particular controller
-router.use('/dev', require('../controllers/developer.js'))
+
 
 // Route requests that start with '/Course' to a particular controller
-router.use('/Course', require('../controllers/Course.js'))
-router.use('/Section', require('../controllers/Section.js'))
-router.use('/Student', require('../controllers/Student.js'))
+router.use('/course', require('../controllers/course.js'))
+router.use('/section', require('../controllers/section.js'))
+router.use('/student', require('../controllers/student.js'))
 
 console.log('END routing')
+
+// catch 404 and forward to error handler
+router.use((req, res, next) => {
+  const error = new Error('Not Found')
+  error.status = 404
+  next(error)
+})
+
+// error handler
+router.use((err, req, res, next) => {
+  // render the error page
+  res.status(err.status || 500)
+  res.render('error', { status: err.status, message: err.message })
+})
 module.exports = router

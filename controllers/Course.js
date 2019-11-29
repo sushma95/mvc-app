@@ -1,92 +1,111 @@
 /**
-*  Course controller
-*  Handles requests related to Course resources.
+*  Developer controller
+*  Handles requests related to developer resources.
 *
-* @author Sushma yedugani <sushmapreethi95@gmail.com>
+* @author sushma yedugani <sushmapreethi95@gmail.com>
+*
+*/
+/**
+*  Course controller
+*  Handles requests related to developer resources.
+*
+* @author Group7 
 *
 */
 const express = require('express')
 const api = express.Router()
-const Model = require('../models/Course.js')
-const find = require('lodash.find')
-const notfoundstring = 'Could not find Course with id='
+const LOG = require('../utils/logger.js')
+const Model = require('../models/course.js')
+const notfoundstring = 'Could not find course with id='
 
 // RESPOND WITH JSON DATA  --------------------------------------------
 
 // GET all JSON
 api.get('/findall', (req, res) => {
-  res.setHeader('Content-Type', 'application/json')
-  const data = req.app.locals.Courses.query
-  res.send(JSON.stringify(data))
+  LOG.info(`Handling /findall ${req}`)
+  Model.find({}, (err, data) => {
+    if (err) { return res.end('Error finding all') }
+    res.json(data)
+  })
 })
 
 // GET one JSON by ID
 api.get('/findone/:id', (req, res) => {
-  res.setHeader('Content-Type', 'application/json')
+  LOG.info(`Handling /findone ${req}`)
   const id = parseInt(req.params.id)
-  const data = req.app.locals.Courses.query
-  const item = find(data, { _id: id })
-  if (!item) { return res.end(notfoundstring + id) }
-  res.send(JSON.stringify(item))
+  Model.find({ _id: id }, (err, results) => {
+    if (err) { return res.end(`notfoundstring ${id}`) }
+    res.json(results[0])
+  })
 })
 
 // RESPOND WITH VIEWS  --------------------------------------------
-// GET to this controller base URI (the default)
-api.get('/', (req, res) => {
-    res.render('Course/index.ejs', {
-      Courses: req.app.locals.Courses.query
-    })
-  })
 
-  // GET create
+// GET /
+api.get('/', (req, res) => {
+  LOG.info(`Handling GET / ${req}`)
+  Model.find({}, (err, data) => {
+    if (err) { return res.end('Error') }
+    res.locals.courses = data
+    res.render('course/index.ejs')
+  })
+})
+
+// GET create
 api.get('/create', (req, res) => {
-  res.render('Course/create', {
-    Courses: req.app.locals.Courses.query,
-    Course: new Model()
+  LOG.info(`Handling GET /create ${req}`)
+  Model.find({}, (err, data) => {
+    if (err) { return res.end('error on create') }
+    res.locals.courses = data
+    res.locals.course = new Model()
+    res.render('course/create')
   })
 })
 
 // GET /delete/:id
 api.get('/delete/:id', (req, res) => {
+  LOG.info(`Handling GET /delete/:id ${req}`)
   const id = parseInt(req.params.id)
-  const data = req.app.locals.Courses.query
-  const item = find(data, { _id: id })
-  if (!item) { return res.end(notfoundstring + id) }
-  res.render('Course/delete', {
-    Course: item
+  Model.find({ _id: id }, (err, results) => {
+    if (err) { return res.end(notfoundstring) }
+    LOG.info(`RETURNING VIEW FOR ${JSON.stringify(results)}`)
+    res.locals.course = results[0]
+    return res.render('course/delete.ejs')
   })
 })
 
 // GET /details/:id
 api.get('/details/:id', (req, res) => {
+  LOG.info(`Handling GET /details/:id ${req}`)
   const id = parseInt(req.params.id)
-  const data = req.app.locals.Courses.query
-  const item = find(data, { _id: id })
-  if (!item) { return res.end(notfoundstring + id) }
-  res.render('Course/details', {
-    Course: item
+  Model.find({ _id: id }, (err, results) => {
+    if (err) { return res.end(notfoundstring) }
+    LOG.info(`RETURNING VIEW FOR ${JSON.stringify(results)}`)
+    res.locals.course = results[0]
+    return res.render('course/details.ejs')
   })
 })
 
 // GET one
 api.get('/edit/:id', (req, res) => {
+  LOG.info(`Handling GET /edit/:id ${req}`)
   const id = parseInt(req.params.id)
-  const data = req.app.locals.Courses.query
-  const item = find(data, { _id: id })
-  if (!item) { return res.end(notfoundstring + id) }
-  res.render('Course/edit', {
-    Course: item
+  Model.find({ _id: id }, (err, results) => {
+    if (err) { return res.end(notfoundstring) }
+    LOG.info(`RETURNING VIEW FOR${JSON.stringify(results)}`)
+    res.locals.course = results[0]
+    return res.render('course/edit.ejs')
   })
 })
 
 // HANDLE EXECUTE DATA MODIFICATION REQUESTS --------------------------------------------
 
-// POST new
+// POST /save
 api.post('/save', (req, res) => {
-  console.info(`Handling POST ${req}`)
-  console.debug(JSON.stringify(req.body))
+  LOG.info(`Handling POST ${req}`)
+  LOG.debug(JSON.stringify(req.body))
   const item = new Model()
-  console.info(`NEW ID ${req.body._id}`)
+  LOG.info(`NEW ID ${req.body._id}`)
   item._id = parseInt(req.body._id)
   item.SchoolNumber = req.body.SchoolNumber
   item.CourseNumber = req.body.CourseNumber
@@ -94,29 +113,48 @@ api.post('/save', (req, res) => {
   item.inSpring = req.body.inSpring
   item.inSummer = req.body.inSummer
   item.inFall = req.body.inFall
- 
-  res.send(`THIS FUNCTION WILL SAVE A NEW developer ${JSON.stringify(item)}`)
+  item.save((err) => {
+    if (err) { return res.end('ERROR: item could not be saved') }
+    LOG.info(`SAVING NEW item ${JSON.stringify(item)}`)
+    return res.redirect('/course')
+  })
 })
 
-// POST update with id
+// POST save with id
 api.post('/save/:id', (req, res) => {
-  console.info(`Handling SAVE request ${req}`)
+  LOG.info(`Handling SAVE request ${req}`)
   const id = parseInt(req.params.id)
-  console.info(`Handling SAVING ID=${id}`)
-  res.send(`THIS FUNCTION WILL SAVE CHANGES TO AN EXISTING COURSE with id=${id}`)
+  LOG.info(`Handling SAVING ID=${id}`)
+  Model.updateOne({ _id: id },
+    { // use mongoose field update operator $set
+      $set: {
+        SchoolNumber: req.body.SchoolNumber,
+        CourseNumber: req.body.CourseNumber,
+        Name: req.body.Name,
+        inSpring: req.body.inSpring,
+        inSummer: req.body.inSummer,
+        inFall: req.body.inFall,
+      }
+    },
+    (err, item) => {
+      if (err) { return res.end(notfoundstring) }
+      LOG.info(`ORIGINAL VALUES ${JSON.stringify(item)}`)
+      LOG.info(`UPDATED VALUES: ${JSON.stringify(req.body)}`)
+      LOG.info(`SAVING UPDATED item ${JSON.stringify(item)}`)
+      return res.redirect('/course')
+    })
 })
 
 // DELETE id (uses HTML5 form method POST)
 api.post('/delete/:id', (req, res) => {
-  console.info(`Handling DELETE request ${req}`)
+  LOG.info(`Handling DELETE request ${req}`)
   const id = parseInt(req.params.id)
-  console.info(`Handling REMOVING ID=${id}`)
-  res.send(`THIS FUNCTION WILL DELETE FOREVER THE EXISTING COURSE with id=${id}`)
+  LOG.info(`Handling REMOVING ID=${id}`)
+  Model.remove({ _id: id }).setOptions({ single: true }).exec((err, deleted) => {
+    if (err) { return res.end(notfoundstring) }
+    console.log(`Permanently deleted item ${JSON.stringify(deleted)}`)
+    return res.redirect('/course')
+  })
 })
-// later
-
-
-
-// later
 
 module.exports = api

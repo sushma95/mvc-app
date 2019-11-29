@@ -8,18 +8,18 @@
       <br>
       <% 
       maxID=0; 
-      for (var i=0; i < Sections.length; i++) {
-        if(Sections[i]._id > maxID) { 
-          maxID=Sections[i]._id;  
+      for (var i=0; i < sections.length; i++) {
+        if(sections[i]._id > maxID) { 
+          maxID=sections[i]._id;  
         }
       }
-      const Section = {}
-      Section._id = maxID+1
+      const section = {}
+      section._id = maxID+1
      
       %>
       <div class="content">
         <div>
-          <form name="Section" method="POST" action="/Section/save">
+          <form name="section" method="POST" action="/section/save">
 
             <div class="form-group" id=frm>
               <label for="_id">ID</label>
@@ -34,7 +34,7 @@
             </div>
           </form>
 
-          <form method="get" action="/Section">
+          <form method="get" action="/section">
             <input type="submit" value="Return to list" class="btn btn-caution" />
           </form>
 

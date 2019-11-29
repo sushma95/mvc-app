@@ -1,24 +1,31 @@
 {
   "name": "node-express",
-  "description": "Express web app using MVC (no views yet)",
+  "description": "Express web app using MVC",
   "version": "1.0.0",
-  "author": "Denise Case",
+  "author": "Group 7",
   "dependencies": {
+    "array-flatten": "latest",
+    "async": "latest",
     "body-parser": "latest",
-    "config": "latest",
-    "consolidate": "latest",
+    "chalk": "latest",
     "cookie-parser": "latest",
-    "debug": "latest",
+    "consolidate": "latest",
+    "dotenv": "latest",
     "ejs": "latest",
+    "errorhandler": "latest",
     "express": "latest",
     "express-ejs-layouts": "latest",
+    "express-validator": "latest",
     "helmet": "latest",
     "lodash": "latest",
     "lodash.find": "latest",
+    "mongodb": "^3.2.3",
     "mongoose": "latest",
-    "morgan": "^1.9.1",
-    "nedb": "latest",
-    "serve-favicon": "latest"
+    "morgan": "latest",
+    "request": "latest",
+    "serve-favicon": "latest",
+    "sort-package-json": "latest",
+    "winston": "latest"
   },
   "devDependencies": {
     "eslint": "latest",
@@ -27,7 +34,6 @@
     "eslint-plugin-node": "latest",
     "eslint-plugin-promise": "latest",
     "eslint-plugin-standard": "latest",
-    "eslint-plugin-vue": "latest",
     "nodemon": "latest"
   },
   "keywords": [
@@ -45,7 +51,7 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/denisecase/node-express-mvc"
+    "url": "https://github.com/AshleyStanbridge96/mvc-app-group-7"
   },
   "scripts": {
     "pre": "eslint .\\",

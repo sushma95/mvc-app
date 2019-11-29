@@ -3,36 +3,36 @@
 <div class="container-fluid">
   <div class=row>
     <div class="col col-md-12">
-      <a href="Course/create" class="btn btn-primary new">
+      <a href="course/create" class="btn btn-primary new">
         Create a new Course
       </a>
 
       <h2>Recent entries</h2>
       <p>There are
-        <%= Courses.length %> Courses.
+        <%= courses.length %> Courses.
         <br>
       </p>
-      <% for (let i = Courses.length-1; i >= 0; i--) {   
-        Course = Courses[i];   %>
+      <% for (let i = courses.length-1; i >= 0; i--) {   
+        course = courses[i];   %>
 
       <div class="panel panel-default">
         <div class="panel-heading"></div>
         <div class="text-muted pull-right"></div>
         <div class="panel-body">
 
-          <br> ID: <%=  Course._id %>
-          <br> SchoolNumber: <%=Course.SchoolNumber%>
-          <br> CourseNumber: <%=Course.CourseNumber%>
-          <br> Name: <%=Course.Name%>
-          <br> inSpring: <%=Course.inSpring %>
-          <br> inSummer: <%=Course.inSummer %>
-          <br> inFall: <%=Course.inFall %>
+          <br> ID: <%=  course._id %>
+          <br> SchoolNumber: <%=course.SchoolNumber%>
+          <br> CourseNumber: <%=course.CourseNumber%>
+          <br> Name: <%=course.Name%>
+          <br> inSpring: <%=course.inSpring %>
+          <br> inSummer: <%=course.inSummer %>
+          <br> inFall: <%=course.inFall %>
           
 
           <hr>
-          <a href="/Course/delete/<%= Course._id  %>" class="btn btn-danger"> Delete </a>
-          <a href="/Course/details/<%= Course._id %>" class="btn btn-info"> Details </a>
-          <a href="/Course/edit/<%= Course._id %>" class="btn btn-primary"> Edit </a>
+          <a href="/course/delete/<%= course._id  %>" class="btn btn-danger"> Delete </a>
+          <a href="/course/details/<%= course._id %>" class="btn btn-info"> Details </a>
+          <a href="/course/edit/<%= course._id %>" class="btn btn-primary"> Edit </a>
           <hr>
           <hr>
         </div>

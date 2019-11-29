@@ -12,59 +12,45 @@ const StudentSchema = new mongoose.Schema({
 
   _id: {
     type: Number,
+    unique: true,
     required: true
   },
- 
-  given: {
+  Email: {
+    type: String,
+    minlength: 5,
+    maxlength: 100,
+    unique: true
+  },
+  Given: {
     type: String,
     minlength: 3,
     maxlength: 100,
-    required: false,
     default: 'Given name'
   },
   family: {
     type: String,
     minlength: 3,
     maxlength: 100,
-    required: false,
     default: 'Family name'
   },
-  email: {
-    type: String,
-    minlength: 5,
-    maxlength: 100,
+  GPA: {
+    type: Number,
     required: true,
-    unique: true
-  },
- 
-  GitHub: {
-    type: String,
-    minlength: 2,
-    maxlength: 100,
-    required: true,
-   
+    min: 0,
+    max: 4,
+    default: 0
   },
   Website: {
     type: String,
-    minlength: 5,
-    maxlength: 12,
-    required: true,
-    default: '64468'
+    default: "http://yourwebsite.com"
   },
-  GPA:
-   {
-    type: Number,
-    minlength: 5,
-    maxlength: 100,
-    required: true
+  GitHub: {
+    type: String,
+    default: "https://www.github.com/"
   },
-     Section_ID: {
+  SectionId: {
     type: Number,
-    minlength: 4,
-    maxlength: 100,
-    required: true
-    
+    default: 0
   }
-
 })
 module.exports = mongoose.model('Student', StudentSchema)

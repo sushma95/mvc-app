@@ -14,7 +14,6 @@ const SectionSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
-
   SectionNumber: {
     type: String,
     maxlength: 2,
@@ -28,14 +27,14 @@ const SectionSchema = new mongoose.Schema({
     required: true,
     default: 'MWF'
   },
-  StartTime : {
+  StartTime: {
     type: Number,
     minlength: 3,
     maxlength: 100,
     required: true,
-    default: '1100'
+    default: 1100
   },
-  RoomNumber : {
+  RoomNumber: {
     type: String,
     minlength: 3,
     maxlength: 100,
@@ -48,6 +47,5 @@ const SectionSchema = new mongoose.Schema({
     maxlength: 3,
     required: true
   }
- 
-})
+ })
 module.exports = mongoose.model('Section', SectionSchema)

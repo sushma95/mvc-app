@@ -1,72 +1,72 @@
 [
+  {
+    "_id": 200,
+    "SchoolNumber":"44",
+    "CourseNumber":"563",
+    "Name": "sush",
+    "inSpring": true,
+    "inSummer": false,
+    "inFall": false
+    
+  },
+  {
+     
+    "_id": 201,
+    "SchoolNumber":  "44",
+    "CourseNumber": "563",
+    "Name": "tuffy",
+    "inSpring": false,
+    "inSummer": true,
+    "inFall": true
+  },
+  {
+      "_id": 202,
+      "SchoolNumber":  "44",
+      "CourseNumber": "563",
+      "Name": "oranishi",
+      "inSpring": false,
+      "inSummer": false,
+      "inFall": true
+      
+    },
     {
-      "_id": 200,
-      "SchoolNumber":"44",
-      "CourseNumber":"563",
-      "Name": "sush",
+      "_id": 203,
+      "SchoolNumber":  "44",
+      "CourseNumber": "563",
+      "Name": "teja",
       "inSpring": true,
       "inSummer": false,
       "inFall": false
       
     },
     {
-       
-      "_id": 201,
+      "_id": 204,
       "SchoolNumber":  "44",
       "CourseNumber": "563",
-      "Name": "tuffy",
-      "inSpring": false,
-      "inSummer": true,
-      "inFall": true
+      "Name": "ishi",
+      "inSpring": true,
+      "inSummer": false,
+      "inFall": false
+      
     },
     {
-        "_id": 202,
-        "SchoolNumber":  "44",
-        "CourseNumber": "563",
-        "Name": "oranishi",
-        "inSpring": false,
-        "inSummer": false,
-        "inFall": true
-        
-      },
-      {
-        "_id": 203,
-        "SchoolNumber":  "44",
-        "CourseNumber": "563",
-        "Name": "teja",
-        "inSpring": true,
-        "inSummer": false,
-        "inFall": false
-        
-      },
-      {
-        "_id": 204,
-        "SchoolNumber":  "44",
-        "CourseNumber": "563",
-        "Name": "ishi",
-        "inSpring": true,
-        "inSummer": false,
-        "inFall": false
-        
-      },
-      {
-        "_id": 205,
-        "SchoolNumber":  "44",
-        "CourseNumber": "563",
-        "Name": "nikki",
-        "inSpring": true,
-        "inSummer": false,
-        "inFall": false
-        
-      },
-      {
-        "_id": 206,
-        "SchoolNumber":  "44",
-        "CourseNumber": "563",
-        "Name": "kritin",
-        "inSpring": true,
-        "inSummer": true,
-        "inFall": false
-        
-      }
-  ]
+      "_id": 205,
+      "SchoolNumber":  "44",
+      "CourseNumber": "563",
+      "Name": "nikki",
+      "inSpring": true,
+      "inSummer": false,
+      "inFall": false
+      
+    },
+    {
+      "_id": 206,
+      "SchoolNumber":  "44",
+      "CourseNumber": "563",
+      "Name": "kritin",
+      "inSpring": true,
+      "inSummer": true,
+      "inFall": false
+      
+    }
+]
