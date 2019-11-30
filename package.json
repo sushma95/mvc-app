@@ -1,32 +1,26 @@
 {
   "name": "node-express",
-  "description": "Express web app using MVC",
+  "description": "Express web app using MVC (no views yet)",
   "version": "1.0.0",
-  "author": "Group 7",
+  "author": "Denise Case",
+  "engines": {
+    "node": "^10"
+  },
   "dependencies": {
-    "array-flatten": "latest",
-    "async": "latest",
-    "body-parser": "latest",
-    "chalk": "latest",
-    "config": "^3.2.4",
-    "cookie-parser": "latest",
-    "consolidate": "latest",
-    "dotenv": "latest",
-    "ejs": "latest",
-    "errorhandler": "latest",
+    "@google-cloud/logging-winston": "^3.0.0",
+    "config": "latest",
+    "consolidate": "^0.15.1",
+    "dotenv": "^8.2.0",
+    "ejs": "^2.7.1",
+    "errorhandler": "^1.5.1",
     "express": "latest",
-    "express-ejs-layouts": "latest",
-    "express-validator": "latest",
-    "helmet": "latest",
+    "express-ejs-layouts": "^2.5.0",
     "lodash": "latest",
     "lodash.find": "latest",
-    "mongodb": "^3.2.3",
     "mongoose": "latest",
-    "morgan": "latest",
-    "request": "latest",
-    "serve-favicon": "latest",
-    "sort-package-json": "latest",
-    "winston": "latest"
+    "nedb": "latest",
+    "serve-favicon": "^2.5.0",
+    "winston": "^3.2.1"
   },
   "devDependencies": {
     "eslint": "latest",
@@ -35,6 +29,7 @@
     "eslint-plugin-node": "latest",
     "eslint-plugin-promise": "latest",
     "eslint-plugin-standard": "latest",
+    "eslint-plugin-vue": "latest",
     "nodemon": "latest"
   },
   "keywords": [
@@ -52,7 +47,7 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AshleyStanbridge96/mvc-app-group-7"
+    "url": "https://github.com/denisecase/node-express-mvc"
   },
   "scripts": {
     "pre": "eslint .\\",

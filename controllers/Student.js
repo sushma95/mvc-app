@@ -94,6 +94,7 @@ api.post('/save', (req, res) => {
   item.family = req.body.family
   item.GPA = req.body.GPA
   item.GitHub = req.body.GitHub
+  item.Website = req.body.Website
   item.SectionId = req.body.SectionId
   item.save((err) => {
     if (err) { return res.end('ERROR: student could not be saved') }
@@ -118,6 +119,7 @@ api.post('/save/:id', (req, res) => {
         family: req.body.family,
          GPA: req.body.GPA,
         GitHub: req.body.GitHub,
+        Website: req.body.Website,
         SectionId: req.body.SectionId,
       }
     },

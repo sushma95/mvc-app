@@ -50,7 +50,8 @@ const StudentSchema = new mongoose.Schema({
   },
   SectionId: {
     type: Number,
-    default: 0
+    min: 0,
+    max: 4
   }
 })
 module.exports = mongoose.model('Student', StudentSchema)
