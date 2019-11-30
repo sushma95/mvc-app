@@ -85,11 +85,11 @@ function seed(collectionName) {
 connection.once('open', function () {
   LOG.info('MongoDB event open')
   LOG.info(`MongoDB connected ${dbURI}\n`)
-
+  seed('courses')
   seed('sections')
   seed('students')
-  seed('courses')
   
+  // seed('orderlineitems')
 
   connection.on('connected', function () {
     LOG.info('MongoDB event connected')

@@ -8,6 +8,7 @@
     "async": "latest",
     "body-parser": "latest",
     "chalk": "latest",
+    "config": "^3.2.4",
     "cookie-parser": "latest",
     "consolidate": "latest",
     "dotenv": "latest",
