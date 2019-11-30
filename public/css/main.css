@@ -1,11 +1,7 @@
 /* ==========================================================================
    needed for fixed navbar and fixed footer
    ========================================================================== */
-   .theme{
-
-    background-color: crimson;
-
-   }
+   
    body {
     min-height: 100vh;
     display: flex;
