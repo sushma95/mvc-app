@@ -18,7 +18,7 @@
       "GitHub": "nikithakethireddy1996",
       "Website": "https://github.com/nikithakethireddy1996",
       "GPA": 3.00,
-      "SectionID": 100
+      "Section": 100
   },
   {
     "_id": 7765,
@@ -28,7 +28,7 @@
     "GitHub": "sushmasush",
     "Website": "https://github.com/sushmasush",
     "GPA": 3.00,
-    "SectionID": 101
+    "Section": 101
 },
 {
   "_id": 9432,
@@ -38,7 +38,7 @@
   "GitHub": "amrutha",
   "Website": "https://github.com/amrutha",
   "GPA": 3.00,
-  "SectionID": 99
+  "Section": 99
 },
 {
 "_id": 8970,
@@ -48,7 +48,7 @@
 "GitHub": "rishikaponugoti",
 "Website": "https://github.com/meg",
 "GPA": 3.00,
-"SectionID": 104
+"Section": 104
 },
 {
 "_id": 6789,
@@ -58,7 +58,7 @@
 "GitHub": "minnu",
 "Website": "https://github.com/minnu",
 "GPA": 3.00,
-"SectionID": 101
+"Section": 101
 },
 {
 "_id": 4567,
@@ -68,6 +68,6 @@
 "GitHub": "pingiliabhi",
 "Website": "https://github.com/pingiliabhi",
 "GPA": 3.00,
-"SectionID": 101
+"Section": 101
 }
 ]

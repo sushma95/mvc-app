@@ -48,7 +48,7 @@ const StudentSchema = new mongoose.Schema({
     type: String,
     default: "https://www.github.com/"
   },
-  SectionId: {
+  Section: {
     type: Number,
     min: 0,
     max: 4

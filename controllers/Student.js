@@ -95,7 +95,7 @@ api.post('/save', (req, res) => {
   item.GPA = req.body.GPA
   item.GitHub = req.body.GitHub
   item.Website = req.body.Website
-  item.SectionId = req.body.SectionId
+  item.Section = req.body.Section
   item.save((err) => {
     if (err) { return res.end('ERROR: student could not be saved') }
     LOG.info(`SAVING NEW student ${JSON.stringify(item)}`)
@@ -120,7 +120,7 @@ api.post('/save/:id', (req, res) => {
          GPA: req.body.GPA,
         GitHub: req.body.GitHub,
         Website: req.body.Website,
-        SectionId: req.body.SectionId,
+        Section: req.body.Section,
       }
     },
     (err, item) => {
