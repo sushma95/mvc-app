@@ -50,6 +50,7 @@ const StudentSchema = new mongoose.Schema({
   },
   Section: {
     type: Number,
+    required: true,
     min: 0,
     max: 4
   }

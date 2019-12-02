@@ -104,7 +104,7 @@ api.post('/save', (req, res) => {
   item.Days = req.body.Days
   item.StartTime = req.body.StartTime
   item.RoomNumber = req.body.RoomNumber
-  item.courseId = req.body.CourseId
+  item.CourseId = req.body.CourseId
   item.save((err) => {
     if (err) { return res.end('ERROR: item could not be saved') }
     LOG.info(`SAVING NEW item ${JSON.stringify(item)}`)
