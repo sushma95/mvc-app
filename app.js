@@ -37,7 +37,7 @@ const isProduction = process.env.NODE_ENV === 'production'
 LOG.info(`Environment isProduction = ${isProduction}`)
 
 // choose the connection
-const dbURI = isProduction ? encodeURI(process.env.ATLAS_URI) : encodeURI(process.env.LOCAL_MONGODB_URI)
+const dbURI = process.env.MONGODB_URI
 LOG.info('MongoDB URL = ' + dbURI)
 
 // get dbName
