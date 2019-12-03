@@ -38,7 +38,6 @@ Start app with nodemon: `nodemon app.js`.
 - npm install
 - node_modules
 - package-lock.json
-- nodemon
 - routing
 - data seeder
 - MVC
@@ -50,5 +49,4 @@ Start app with nodemon: `nodemon app.js`.
 # Resources
 
 - [Bootstrap Material Design CDN](https://mdbootstrap.com/md-bootstrap-cdn/)
-- [JavaScript Standard Style Validator](https://standardjs.com/demo.html)
 - [ESLint](https://eslint.org/)
