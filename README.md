@@ -18,7 +18,7 @@
 
 - [Sushma Yedugani](https://sushma95.github.io/about-me/)
 - [Nikitha Kethireddy](https://nikithakethireddy1996.github.io/p2-styled-site/)
-
+- [Rishika Ponugoti](https://rishikaponugoti.github.io/about-me/)
 
 # Dev Tools
 
