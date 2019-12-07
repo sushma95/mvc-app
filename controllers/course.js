@@ -1,6 +1,6 @@
 /**
-*  Developer controller
-*  Handles requests related to developer resources.
+*  COURSE controller
+*  Handles requests related to COURSE resources.
 *
 * @author sushma yedugani <sushmapreethi95@gmail.com>
 *
