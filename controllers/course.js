@@ -5,13 +5,7 @@
 * @author sushma yedugani <sushmapreethi95@gmail.com>
 *
 */
-/**
-*  Course controller
-*  Handles requests related to developer resources.
-*
-* @author Group7 
-*
-*/
+
 const express = require('express')
 const api = express.Router()
 const LOG = require('../utils/logger.js')
